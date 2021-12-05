@@ -1,0 +1,80 @@
+Topic2_Git 써보기
+
+01. repository와 commit
+
+    커밋 (commit) 
+    프로젝트 디렉토리의 특정 모습을
+    하나의 버전으로 남기는 행위 & 결과물
+
+    레포지토리 (repository)
+    커밋이 저장되는 곳 .git 디렉토리
+
+02. repository 만들기
+
+    cd MathTool/ MathTool 폴더 생성
+    git init 비어있는 레포지토리를 생성
+
+03. 첫 commit 해보기
+
+    ls -la 파일안 목록 보기
+    mkdir 디렉토리 만들기
+
+    1. 처음으로 커밋을 하기 전
+     - 사용자의 이름과 이메일 주소를 설정
+     - git config user.name "이름"
+     - git config user.email "메일주소"
+
+    2. 커밋할 파일을 git add로 지정해주기
+     - git add 기록할 파일이름
+
+    3. 커밋 메시지 남기기 (옵션 -m)
+     - git commit -m "기록내용"
+
+05. git의 3가지 작업 영역
+
+    1. working directory
+    2. staging area
+    3. repository
+
+07. git add 더 자세히 알아보기
+
+    status 깃이 인식하고 있는 프로젝트 디렉토리에 상태를 보여줌
+    changes to be committed : 커밋에 반영될 변경사항
+    changes not staged for commit : 커밋에 반영되지 않는 변경사항
+
+    touch  0바이트 파일을 생성하기 위해 자주 사용되는 명령어
+
+    git add . 수정한 모든 파일 staging area에 파일 추가
+
+08. Git이 보는 파일의 4가지 상태
+
+    Untracked 상태 
+    : 추적되고 있지 않은, 파일을 생성하고 한번도 git add를 해주지 않은 상태
+
+    Tracked 상태 : 추적되고 있는 상태
+    - Staged 상태 : 수정되고 나서 staging area에 올라와있는 상태
+    - Unmodified 상태 : 최신 커밋의 모습과 비교했을때 바뀐게 전혀 없는 상태
+    - Modified 상태 : 최신 커밋의 모습과 비교했을때 바뀐 내용이 있는 상태
+
+09. git add 취소하기
+
+    git reset : staging area에서 파일 제거
+    working tree = working directory 
+    clean = 이전 커밋 이후로 변경사항 없음!
+
+10. 특정 git 커맨드의 사용법을 알고 싶다면?
+
+    git help 알고싶은 커맨드의 이름
+
+12. Git 써보기 정리 노트
+
+    git init : 현재 디렉토리를 Git이 관리하는 프로젝트 디렉토리(=working directory)로 설정하고 그 안에 레포지토리(.git 디렉토리) 생성
+    git config user.name 'codeit' : 현재 사용자의 아이디를 'codeit'으로 설정(커밋할 때 필요한 정보)
+    git config user.email 'teacher@codeit.kr' : 현재 사용자의 이메일 주소를 'teacher@codeit.kr'로 설정(커밋할 때 필요한 정보)
+    git add [파일 이름] : 수정사항이 있는 특정 파일을 staging area에 올리기
+    git add [디렉토리명] : 해당 디렉토리 내에서 수정사항이 있는 모든 파일들을 staging area에 올리기 
+    git add . : working directory 내의 수정사항이 있는 모든 파일들을 staging area에 올리기
+    git reset [파일 이름] : staging area에 올렸던 파일 다시 내리기
+    git status : Git이 현재 인식하고 있는 프로젝트 관련 내용들 출력(문제 상황이 발생했을 때 현재 상태를 파악하기 위해 활용하면 좋음) 
+    git commit -m "커밋 메시지" : 현재 staging area에 있는 것들 커밋으로 남기기
+    git help [커맨드 이름] : 사용법이 궁금한 Git 커맨드의 공식 메뉴얼 내용 출력
