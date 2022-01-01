@@ -304,3 +304,31 @@ console.log(Math.ceil(2.4));
 
 // Math.random : 난수 (0~1 사이 값 랜덤 리턴)
 console.log(Math.round(Math.random()));
+
+// 문자열 심화
+let myString = 'Hi Codeit';
+
+// 부분 문자열 접근 slice(start, end)
+console.log(myString.slice(0, 2)); // 0부터 1까지
+// 두번째 파라미터 생략시 start부터 문자열 끝까지
+
+// 양 끝 공백 제거
+console.log(myString.trim());
+
+// 대소문자 변환
+console.log(myString.toUpperCase()); // 대문자로
+console.log(myString.toLowerCase()); // 소문자로
+
+// 요소 탐색
+console.log(myString.indexOf('i')); // 앞부터 검색
+console.log(myString.lastIndexOf('i')); // 뒤부터 검색
+
+// 요소 접근
+console.log(myString[3]); // 대괄호 표기법 (0부터) 
+console.log(myString.charAt(3)); // charAt 메소드
+
+// 문자열 길이
+console.log(myString.length); // length 프로퍼티
+
+// 기본형과 참조형 (주소값을 참조해서 값에 접근)
+//          객체, 배열 등
