@@ -35,18 +35,19 @@ console.log(typeof 'codeit');
 console.log(typeof true);
 
 let name = 'Codeit';
+
 function sayHello() {
-  console.log('Hello');
+    console.log('Hello');
 }
 
 console.log(typeof name);
 console.log(typeof sayHello);
 
-console.log(typeof 'Hello' + 'Codeit'); 
+console.log(typeof 'Hello' + 'Codeit');
 // 실행시 stringCodeit 출력 typeof 연산자가 더 우선순위기 때문에
 // typeof 'Hello' -> string 결과 + 'Codeit' -> stringCodeit
 
-console.log(typeof typeof (3 + 5));
+console.log(typeof typeof(3 + 5));
 
 // 형 변환 (Type Conversion) : string, number, boolean
 console.log(Number('10') + Number('5')) // -> 숫자 15
@@ -70,7 +71,7 @@ console.log(`생년월일은 ${year}년 ${month}월 ${day}일 입니다.`);
 let myNumber = 3;
 
 function getTwice(x) {
-  return x * 2;
+    return x * 2;
 }
 
 console.log(`${myNumber}의 두 배는 ${getTwice(myNumber)}입니다.`);
@@ -99,16 +100,16 @@ q -= 2;
 console.log(q);
 
 // 증가, 감소 연산자
-q ++;
+q++;
 console.log(q);
-q --;
+q--;
 console.log(q);
 
 // 옵셔널 파라미터 (Optional parameters)
-function introduce (name, age, nationality = '미국') {
-  console.log(`제 이름은 ${name}입니다.`);
-  console.log(`나이는 ${age}살 이고, `);
-  console.log(`국적은 ${nationality}입니다.`);
+function introduce(name, age, nationality = '미국') {
+    console.log(`제 이름은 ${name}입니다.`);
+    console.log(`나이는 ${age}살 이고, `);
+    console.log(`국적은 ${nationality}입니다.`);
 }
 
 introduce('우예인', 18, '한국');
@@ -121,9 +122,9 @@ let yy = 6; // 글로벌 변수, 전역 변수
 
 // Scope: 범위, 영역
 function myFunction() { // 블록문
-  let xx = 3; // 로컬 변수, 지역 변수
-  console.log(xx);
-  console.log(yy);
+    let xx = 3; // 로컬 변수, 지역 변수
+    console.log(xx);
+    console.log(yy);
 }
 
 myFunction();
@@ -145,21 +146,21 @@ console.log('__________제어문___________');
 
 let myChoice = 4;
 
-switch(myChoice) {
-  case 1:
-    console.log('토끼 선택');
-    break;
-  case 2:
-    console.log('고양이 선택');
-    break;
-  case 3:
-    console.log('코알라 선택');
-    break;
-  case 4:
-    console.log('강아지 선택');
-    break;
-  default:
-    console.log('1 - 4 사이의 숫자를 선택해주세요.');
+switch (myChoice) {
+    case 1:
+        console.log('토끼 선택');
+        break;
+    case 2:
+        console.log('고양이 선택');
+        break;
+    case 3:
+        console.log('코알라 선택');
+        break;
+    case 4:
+        console.log('강아지 선택');
+        break;
+    default:
+        console.log('1 - 4 사이의 숫자를 선택해주세요.');
 }
 
 // 단, 암시적 형변환 허용하지 않기 때문에 === 사용
@@ -174,24 +175,27 @@ switch(myChoice) {
 let i = 30;
 
 while (i % 7 !== 0) {
-  i ++;
+    i++;
 }
 
 console.log(i);
 
 // break, continue
 
-for(let i = 1; i <= 10; i ++) {
-  if(i % 2 == 0) {
-    continue; // 아래 코드 실행 X 다음 단계로 넘어감
-  }
-  console.log(i);
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 == 0) {
+        continue; // 아래 코드 실행 X 다음 단계로 넘어감
+    }
+    console.log(i);
 }
 
 // 이중 for 문 사용해서 구구단 만들기
 
-for(let i = 1; i <= 9; i ++) {
-  for(let j = 1; j <= 9; j ++) {
-    console.log(`${i} * ${j} = ${i * j}`);
-  }
+for (let i = 1; i <= 9; i++) {
+    for (let j = 1; j <= 9; j++) {
+        console.log(`${i} * ${j} = ${i * j}`);
+    }
 }
+
+// const 변수 vs const 상수
+// myName        MY_NAME

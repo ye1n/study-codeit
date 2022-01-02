@@ -332,3 +332,47 @@ console.log(myString.length); // length 프로퍼티
 
 // 기본형과 참조형 (주소값을 참조해서 값에 접근)
 //          객체, 배열 등
+
+// 참조형 복사하기
+let n1 = [1, 2, 3];
+let n2 = n1.slice();
+
+n2.push(4);
+
+console.log(n1);
+console.log(n2);
+
+// 객체
+
+// 함수 사용
+function cloneObject(object) {
+
+    let temp = {};
+
+    for (let key in object) {
+        temp[key] = object[key];
+    }
+
+    return temp;
+};
+
+let course1 = {
+    title: '파이썬 프로그래밍 기초',
+    language: 'Python'
+};
+
+//let course2 = Object.assign({}, course1);
+let course2 = cloneObject(course1);
+
+course2.title = '알고리즘의 정석';
+
+console.log(course1);
+console.log(course2);
+
+// const : 변하지 않는 고정된 값 상수
+
+// 함수 스코프 : 함수를 기준으로만 적용되는 스코프
+// 블록 스코프 : 코드 블록을 기준으로 적용되는 스코프
+
+// 호이스팅(hoisting) : 변수가 끌어올려 지는 현상
+// 선언과 동시에 값을 할당하더라도, 선언문만 올려지기 때문에 값은 그대로 남아있다
